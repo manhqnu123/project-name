@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+body::-webkit-scrollbar {  
+    display: none; /* Ẩn thanh cuộn */  
+} 
+:root{
+    --hover-color: #b1aaaa;
+    --primary-color:#B60000;
+}
+a{
+    text-decoration: none;
+    color: black !important;
+}
+li{
+    list-style: none;
+}
+.nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    left: -10px;
+}
+.logo a, .Upload{
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.logo a:hover, .Upload:hover{
+    background-color: var(--hover-color);
+}
+.nav-search{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+.nav-search input{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 10px 40px;
+    outline: none;
+    border: none;
+    background-color: var(--hover-color);
+    border-radius: 30px;
+}
+.nav-search .search-icon{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.nav-search--menu{
+    position: absolute;
+    top: calc(100% + 25px);
+    left: 0;
+    background-color: #fff;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border: 1px solid #ccc; 
+    border-radius: 16px;
+    overflow-y: auto;
+    width: 100%;
+    display: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.search-menu--item{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.5s;
+    
+}
+.search-menu--item:hover{
+    background-color: var(--hover-color);
+}
+.nav-user{
+    position: relative;
+    right: 60px;
+}
+.nav-user--item{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.fa-bell, .fa-comment-dots{
+    font-size: 1.5rem;
+}
+.nav-user--item:hover{
+    background-color: var(--hover-color);
+}
+
+/* login */
