@@ -1,3 +1,32 @@
+<?php
+    require_once("./database/connect.php");
+    if(isset($_POST['login'])){
+        $Email = $_POST['Email'];
+        $Pass = $_POST['pass'];
+        $sql = "select * from users where Email = '$Email' and password ='$Pass'";
+        $run = mysqli_query($connect,$sql);
+        $num = mysqli_num_rows($run);
+        $errors = [];
+        if($num == 1) {
+            header("Location:http://localhost:8080/pinterest/");
+            exit();
+        }
+        if($num != 1 && $Email != "" && $Pass !=""){
+            $errors['wrong'] = "Sai Email hoặc mật khẩu";
+        }
+        if($Email == "" && $Pass == ""){
+            $errors["emt"] = "Vui lòng nhập Email và mật khẩu";
+         } 
+        
+        if($Email != "" && $Pass == ""){
+            $errors["emt"] = "Vui lòng nhập mật khẩu";
+        }
+         if($Email == "" && $Pass != ""){
+            $errors["emt"] = "Vui lòng nhập Email";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,8 +190,8 @@ a {
             </div>
             <p class="h5">Quên mật khẩu?</p>
             <?php 
-    echo !empty($errors["rỗng"])?'<p style="color:red;">'.$errors["rỗng"].'</p>' : ' ' ;
-    echo !empty($errors["sai"])?'<p style="color:red;">'.$errors["sai"].'</p>' : ' ' ;
+    echo !empty($errors["emt"])?'<p style="color:red;">'.$errors["emt"].'</p>' : ' ' ;
+    echo !empty($errors["wrong"])?'<p style="color:red;">'.$errors["wrong"].'</p>' : ' ' ;
   ?>
             <button type="submit" class="btn btn-danger" name="login">Đăng nhập</button>
             <p class="text-center h5">Hoặc</p>
