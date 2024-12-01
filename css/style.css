@@ -109,3 +109,20 @@ li{
 }
 
 /* login */
+/* body-main */
+.main-home{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-home .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    gap: 10px;
+}
+
+.grid a img{
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+}

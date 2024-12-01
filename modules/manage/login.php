@@ -8,6 +8,8 @@
         $num = mysqli_num_rows($run);
         $errors = [];
         if($num == 1) {
+            setcookie("Email",$Email,time()+(86400*7));
+            setcookie("Pass",$Pass,time()+(86400*7));
             header("Location:http://localhost:8080/pinterest/");
             exit();
         }
