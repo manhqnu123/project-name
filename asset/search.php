@@ -2,7 +2,7 @@
     require_once("C:\\xamppserver\\htdocs\\pinterest\\database\\connect.php");
     
     $data = $_POST['data'];
-    $query = "select name from image where name like '%d$data%' OR Type like '%$data%'";
+    $query = "select * from picture where title like '%d$data%' OR authorName like '%$data%'";
     $run_query = mysqli_query($connect, $query);
     $num = mysqli_num_rows($run_query);
     
