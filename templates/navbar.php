@@ -14,11 +14,14 @@
                     </ul>
                 </div>';
     } else{
-        $html1 = '<button type="button" class="btn btn-danger mx-2"><a">Đăng
-                nhập</a></button>
+        $html1 = '<button type="button" class="btn btn-danger mx-2">
+                    <a class="text-light text-decoration-none" href="http://localhost:8080/pinterest/?module=manage&action=login">
+                        Đăngnhập
+                    </a>
+                </button>
                 <button type="button" class="btn btn-danger">
                 <a
-                href="" class="text-light text-decoration-none">Đăng
+                href="http://localhost:8080/pinterest/?module=manage&action=signup" class="text-light text-decoration-none">Đăng
                 kí</a></button>';
     }
 ?>
@@ -68,7 +71,7 @@ $(document).ready(function() {
         if (event.keyCode === 13) { // Kiểm tra mã phím (Enter)  
             // Thực hiện hành động khi nhấn Enter  
             window.location.href =
-                "http://localhost:8080/pinterest/?module=manage&action=login&search=" +
+                "http://localhost:8080/pinterest/?module=home&action=search&search=" +
                 $('#search').val();
         }
     });

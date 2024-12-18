@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
     display: none; /* Ẩn thanh cuộn */  
 } 
 :root{
-    --hover-color: #b1aaaa;
+    --hover-color: #ececec;
     --primary-color:#B60000;
 }
 a{
