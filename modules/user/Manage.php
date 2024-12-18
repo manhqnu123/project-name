@@ -9,13 +9,7 @@
         $name = $row['username'];
         $surname = $row['surname'];
     }
-    if(isset($_POST['update'])){
-        $n = $_POST['name'];
-        $s = $_POST['surname'];
-        $file = $_FILES['avatar']['name'];
-        $insert = "update users set username = '$n', surname = '$s' where email = '$email' and password = '$Pass'";
-        $run = mysqli_query($connect, $insert);
-    }
+    
 ?>
 <style>
 input[type="file"] {
@@ -143,7 +137,7 @@ input[type="file"] {
                 </div>
                 <div class="grp-btn">
                     <button>Thiết lập lại</button>
-                    <button type="submit" name="update">Lưu</button>
+                    <button type="submit" name="update" class="update">Lưu</button>
                 </div>
             </form>
         </div>
@@ -181,6 +175,10 @@ input[type="file"] {
     </div>
 </div>
 <script>
+document.querySelector(".update").addEventListener("click", () => {
+    window.location.href = "http://localhost:8080/pinterest/?module=user&action=Manage";
+})
+
 function ChangeTab(tabId, e) {
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => {
@@ -196,3 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 </script>
+<?php
+    require_once("./database/connect.php");
+    if(isset($_POST['update'])){
+        $n = $_POST['name'];
+        $s = $_POST['surname'];
+        $file = $_FILES['avatar']['name'];
+        $insert = "update users set username = '$n', surname = '$s' where email = '$email' and password = '$Pass'";
+        $run = mysqli_query($connect, $insert);
+    }
+?>

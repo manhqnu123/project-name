@@ -8,7 +8,7 @@
         $sql = "select * from picture order by rand() limit 20";
         $run = mysqli_query($connect, $sql);
         while($row = mysqli_fetch_array($run)){
-            echo '<a href="">
+            echo '<a href="http://localhost:8080/pinterest/?module=infoImg&action=infoimg&id='.$row['id'].'">
                     <img src="'.$row['link'].'" alt="">
                 </a>';
         }

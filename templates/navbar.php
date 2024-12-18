@@ -3,14 +3,14 @@
         $html1 = '<div class="nav-user">
                     <i class="fa-solid fa-bell nav-user--item"></i>
                     <i class="fa-solid fa-comment-dots nav-user--item"></i>
-                    <img src="https://img.myloview.com/stickers/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg"
+                    <a href="http://localhost:8080/pinterest/?module=manage&action=trangnguoidung"><img src="https://img.myloview.com/stickers/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg"
                         alt="" srcset="" class="nav-user--item"
-                        style="width:50px; height:50px; object-fit: cover; border-radius:50%;">
+                        style="width:50px; height:50px; object-fit: cover; border-radius:50%;"></a>
                     <i class="fa-solid fa-angle-down nav-user--item " id="dropdownMenuButton1"
                         data-bs-toggle="dropdown"></i>
                     <ul class=" dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Chuyển tài khoản</a></li>
-                        <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:8080/pinterest/?module=manage&action=logout">Đăng xuất</a></li>
                     </ul>
                 </div>';
     } else{

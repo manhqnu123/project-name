@@ -291,7 +291,7 @@ body {
                         while($row = mysqli_fetch_array($run)){
                             $nameUser = $row['username'];
                         }
-                        $getCmt = "select * from comment";
+                        $getCmt = "select * from comment where idPicture = $id";
                         $cmt = mysqli_query($connect, $getCmt);
                         while($rCmt = mysqli_fetch_array($cmt)){
                             echo '<div class = "comment-item">
