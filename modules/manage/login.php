@@ -158,6 +158,7 @@ a {
 </style>
 
 <body>
+
     <div class="login-page">
         <div class="nav">
             <div class="nav-left">
@@ -180,6 +181,10 @@ a {
         </div>
         <img src="./img/z6031057825210_3f4ffb3e73e7986fb151f060fcc815b2.jpg">
         <form action="" method="post" class="container " style="width: 25%;margin-top: 5%;">
+            <div style="margin-left:30px;"><img src="./img/logopin.png" alt=""
+                    style="height:80px; object-fit:cover;align-items:center;">
+                <p style="font-weight: bold;">Chào mừng đến với pinterest</p>
+            </div>
             <div class="mb-3">
                 <label for="Email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="Email" name="Email"
@@ -188,7 +193,7 @@ a {
             <div class="mb-3 ps-check">
                 <label for="Password" class="form-label">Mật khẩu:</label>
                 <input type="password" class="form-control" name="pass">
-                <i class="fa-solid fa-eye "></i>
+
             </div>
             <p class="h5">Quên mật khẩu?</p>
             <?php 
@@ -196,9 +201,9 @@ a {
     echo !empty($errors["wrong"])?'<p style="color:red;">'.$errors["wrong"].'</p>' : ' ' ;
   ?>
             <button type="submit" class="btn btn-danger" name="login">Đăng nhập</button>
-            <p class="text-center h5">Hoặc</p>
-            <div> <button class="fb" name="facebook">Đăng nhập với Facebook</button></div>
-            <div><button class="gg" name="google">Đăng nhập với Google</button></div>
+            <p class="text-center h5">HOẶC</p>
+            <div> <button class="fb" name="facebook">Tiếp tục với Facebook</button></div>
+            <div><button class="gg" name="google">Tiếp tục bằng Google</button></div>
 
 
         </form>

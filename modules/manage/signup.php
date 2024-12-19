@@ -121,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         text-align: center;
         margin-bottom: 20px;
         font-size: 1.1em;
+        font-weight: 300;
     }
 
     label {
@@ -206,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         background-color: #ff0000;
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 25px;
         cursor: pointer;
         font-size: 18px;
         font-weight: bold;

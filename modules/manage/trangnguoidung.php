@@ -90,10 +90,24 @@
         display: none;
         padding: 20px;
         text-align: center;
+        position: relative;
+        gap: 10px;
     }
 
     .tab-content.active {
-        display: block;
+        display: flex;
+    }
+
+    .img-content {
+        width: 200px;
+        height: 200px;
+    }
+
+    .img-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
     }
     </style>
 </head>
@@ -145,8 +159,14 @@
     </div>
 
     <div class="tab-content active" id="saved">
-        <h2>Đã lưu</h2>
-        <p>Nội dung các ghim đã lưu sẽ hiển thị ở đây.</p>
+        <div class="img-content">
+            <img src="https://i.pinimg.com/736x/12/27/22/1227222000536537007bff015d70aaa9.jpg"
+                alt="">
+        </div>
+        <div class="img-content">
+            <img src="https://i.pinimg.com/736x/32/e5/25/32e525b7a5811800f15f05e23c2ef516.jpg"
+                alt="">
+        </div>
     </div>
 
     <div class="tab-content" id="created">
